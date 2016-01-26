@@ -17,7 +17,7 @@ public class Logout extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 			
-		req.getSession().getAttribute("usuario.logado");
+		req.getSession().removeAttribute("usuario.logado");
 		PrintWriter writer = resp.getWriter();
 		writer.println("<html><body>Usuário deslogado!</body></html>");
 	}
