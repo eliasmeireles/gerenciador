@@ -4,6 +4,7 @@ package br.com.caelum.gerenciador.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +29,9 @@ public class Login extends HttpServlet {
 			writer.println("<html><body>Usuário ou senha inválida</body></html>");
 		} else {
 			HttpSession session = req.getSession();
-			session.setAttribute("usuario.logado", usuario);
-			writer.println("<html><body>Usuário logado: " + email + "</body></html>");
+			session.setAttribute("usuarioLogado", usuario);
+	        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+	        dispatcher.forward(req, resp);
 		}
 	}
 }
