@@ -1,5 +1,5 @@
 
-package br.com.caelum.gerenciador.web;
+package br.com.alura.gerenciador.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;

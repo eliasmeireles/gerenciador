@@ -1,4 +1,4 @@
-package br.com.caelum.gerenciador.web;
+package br.com.alura.gerenciador.web;
 
 import javax.servlet.http.Cookie;
 
